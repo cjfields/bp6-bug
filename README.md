@@ -49,16 +49,17 @@ lives-ok {Bio::SeqIO.new(format  => 'Bio::SeqIO::fasta')}, 'two levels deep';
 Note the commented `use` statements; these should be loaded dynamically.  When running this, the last two tests fail:
 
 ```
-[cjfields@Chriss-MacBook-Air lex-bp6]$ perl6 SeqIO.pl6
+[cjfields@Chriss-MacBook-Air lex-bp6 (master)]$ perl6 SeqIO.pl6
+ok 1 - simple path
+not ok 2 - one level deep
 
-ok 1 -
-not ok 2 -
-
-# Failed test at SeqIO.pl6 line 14
+# Failed test 'one level deep'
+# at SeqIO.pl6 line 18
 # Can't load Bio::fasta: No such symbol 'Bio::fasta'
-not ok 3 -
+not ok 3 - two levels deep
 
-# Failed test at SeqIO.pl6 line 15
+# Failed test 'two levels deep'
+# at SeqIO.pl6 line 19
 # Can't load Bio::SeqIO::fasta: No such symbol 'Bio::SeqIO::fasta'
 ```
 
