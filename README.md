@@ -85,6 +85,7 @@ lives-ok {Bio::SeqIO.new(format  => 'fasta')}, 'simple path';
 # These next two fail w/ 'No such symbol' errors
 lives-ok {Bio::SeqIO.new(format  => 'Bio::fasta')}, 'one level deep';
 lives-ok {Bio::SeqIO.new(format  => 'Bio::SeqIO::fasta')}, 'two levels deep';
+
 [cjfields@Chriss-MacBook-Air lex-bp6 (master)]$ perl6 SeqIO.pl6
 ok 1 - simple path
 ok 2 - one level deep
