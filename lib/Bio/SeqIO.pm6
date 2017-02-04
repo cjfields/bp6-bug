@@ -10,10 +10,11 @@ class Bio::SeqIO {
             require ::($format);
         };
 
-        if ::($format) ~~ Failure {
+        if MY::{$format} ~~ Failure {
             die "Can't load $format: $!";
         } else {
-            $!plugin = ::($format).new();
+            $!plugin = MY::{$format}.new();
+            dd $!plugin;
         }
     }
 }
