@@ -15,6 +15,7 @@ class Bio::SeqIO {
         } else {
             $!plugin = MY::{$format}.new();
             dd $!plugin;
+            dd MY::{$format};
         }
     }
 }
